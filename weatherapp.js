@@ -103,7 +103,7 @@ function todaysWeather(){
 
 function fiveDayForecast() {
 
-    var weatherApiCall = "http://api.openweathermap.org/data/2.5/forecast?q=";
+    var weatherApiCall = "https://api.openweathermap.org/data/2.5/forecast?q=";
     var celsiusSelected = document.getElementById("celsius");
     var fahrenheitSelected = document.getElementById("fahrenheit");
     var day_list = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
