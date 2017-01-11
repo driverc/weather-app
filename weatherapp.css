@@ -19,11 +19,7 @@
 }
 
 body {
-<<<<<<< HEAD
-    background-image: url("images/killarney4.JPG");
-=======
     background-image: url("./weather-app/images/killarney4.JPG");
->>>>>>> origin/master
     background-size: cover;
     max-width: 100%;
     height: auto;
