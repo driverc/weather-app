@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    
+    <link rel="stylesheet" type="text/css" href="weatherapp.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    
+    <script type="text/javascript" src="weatherapp.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7STUB3APpUrtnoifs8l-X-MqE5c_pM38&libraries=places&callback=initAutocomplete"
+        async defer></script>
+    <title>Charlie's Weather App</title>
+</head>
+
+<body>
+    <section id="banner">
+        <div class="container">
+            <header>
+                <h1>Charlie's Weather App</h1>
+            </header>        
+        </div>
+    </section>   
+
+    <section id="location-scale">
+        <div id="radios">
+            <input type = "radio" name = "tempScale" id = "celsius" onclick="todaysWeather()" checked> Celsius </br>
+            <input type = "radio" name = "tempScale" id = "fahrenheit" onclick="todaysWeather()"> Fahrenheit </br>
+            </br>
+        </div>
+        <div class="container">
+            <form>                         
+                <input type="text" id="location" size="35" onFocus="geolocate()" autofocus>   <!--onFocus="geolocate()" for Maps geolocate bias-->
+            </form>
+        </div>           
+    </section>
+
+    <section id="current-weather">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5" id="current"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-2 col-md-offset-5" id="current_location"></div>
+        </div>
+        </br>
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5">
+                <img id="weather_icon" src="">
+            </div>
+            <div class="col-md-1" id="current_temp"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-1 col-md-offset-5" id="conditions"></div>
+            <div class="col-md-1" id="cond_detail"></div>
+        </div>      
+    </div>
+    </section>
+
+    <!--secondary info not used yet, add later-->
+    <section id="secondary_info">
+        <div class="container">
+            <div id="high_temp"></div>
+            <div id="low_temp"></div>
+            <div id="wind"></div>
+            <div id="humidity"></div>
+            <div id="sunrise"></div>
+            <div id="sunset"></div>
+            <div id="pressure"></div>
+        </div>
+    </section>
+    
+
+    <div class="row" id="five-day-header">
+        <div class="col-md-4 col-md-offset-4" id="5day"></div>
+    </div> 
+
+    <section id="five_day_forecast">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1" id="day1"></div>
+                <div class="col-md-1" id="day2"></div>
+                <div class="col-md-1" id="day3"></div>
+                <div class="col-md-1" id="day4"></div>
+                <div class="col-md-1" id="day5"></div>
+             </div>
+
+             <div class="row">           
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1" id="day-date1"></div>
+                <div class="col-md-1" id="day-date2"></div>
+                <div class="col-md-1" id="day-date3"></div>
+                <div class="col-md-1" id="day-date4"></div>
+                <div class="col-md-1" id="day-date5"></div>
+             </div>
+
+             <div class="row">
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1">
+                    <img id="weather_icon_1" src="">    
+                </div>
+                <div class="col-md-1">
+                    <img id="weather_icon_2" src="">
+                </div>
+                <div class="col-md-1">
+                    <img id="weather_icon_3" src="">
+                </div>
+                <div class="col-md-1">
+                    <img id="weather_icon_4" src="">
+                </div>
+                <div class="col-md-1">
+                    <img id="weather_icon_5" src="">
+                </div>
+             </div>
+
+             <div class="row">           
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1" id="high_temp1"></div>
+                <div class="col-md-1" id="high_temp2"></div>
+                <div class="col-md-1" id="high_temp3"></div>
+                <div class="col-md-1" id="high_temp4"></div>
+                <div class="col-md-1" id="high_temp5"></div>
+             </div>
+
+             <div class="row">           
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1" id="conditions1"></div>
+                <div class="col-md-1" id="conditions2"></div>
+                <div class="col-md-1" id="conditions3"></div>
+                <div class="col-md-1" id="conditions4"></div>
+                <div class="col-md-1" id="conditions5"></div>
+             </div>
+
+             <div class="row">           
+                <div class="col-md-1 col-md-offset-3"></div>
+                <div class="col-md-1" id="description1"></div>
+                <div class="col-md-1" id="description2"></div>
+                <div class="col-md-1" id="description3"></div>
+                <div class="col-md-1" id="description4"></div>
+                <div class="col-md-1" id="description5"></div>
+             </div>
+
+        </div>
+    </section>
+
+    <div id="street_number"></div>
+    <div id="route"></div>
+	<div id="locality"></div>
+	<div id="administrative_area_level_1"></div>
+    <div id="postal_code"></div>
+    <div id="country"></div>
+</body>    
