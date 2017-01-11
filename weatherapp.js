@@ -58,7 +58,7 @@ function fillInAddress() {
 //Retrieving weather information from openweathermap.org API. Functions to get today's weather, and a 5 day forecast
 function todaysWeather(){
 
-    var weatherApiCall = "http://api.openweathermap.org/data/2.5/weather?q=";
+    var weatherApiCall = "https://api.openweathermap.org/data/2.5/weather?q=";
     var celsiusSelected = document.getElementById("celsius");
     var fahrenheitSelected = document.getElementById("fahrenheit");
 
