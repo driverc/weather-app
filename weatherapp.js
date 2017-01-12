@@ -1,8 +1,7 @@
 function unsafeScriptAlert(){
-    alert("Openweathermap.org does not use https, which is a requirement for GitHub Pages. For this app to work properly here, you will have to select Load Unsafe Scripts when your browser prompts you to, after selecting a location.");
+    alert("Openweathermap.org does not use https, which is a requirement for GitHub Pages. For this app to work properly here, you will have to select Load Unsafe Scripts (from the address bar in Chrome) when your browser prompts you to, after selecting a location.");
     
 }
-
 
 //Google Maps API: set location using Autocomplete object
 var autocomplete;
